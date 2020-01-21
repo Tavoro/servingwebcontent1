@@ -19,9 +19,6 @@ public class UsersController {
         this.usersRepository = usersRepository;
     }
 
-
-
-
     @PutMapping
     public User editUser( User user) {
 
@@ -34,7 +31,6 @@ public class UsersController {
         return Id;
     }
 
-
     @GetMapping
     public ResponseEntity allUsers(@RequestParam(name = "id", required = false) Integer id) {
 
@@ -45,7 +41,6 @@ public class UsersController {
             return ResponseEntity.ok(usersRepository.findById(id).get());
         }
     }
-
 
     @PostMapping
     public User postUser(User user) {
